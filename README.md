@@ -16,4 +16,4 @@ __Install guide__ :
 __Use guide__ :
 - Once connected, get a medikit item in your inventory and press the key "**K**" near a dead person to execute the script.
 If no EMS online the animation will start and will end up with reanimation of the dead person.
-If an EMS is connected, you will get a notification saying that you need to call an EMS.
+If an EMS is connected, you will get a notification saying that you need to call an EMS and no reanimation will be possible.
