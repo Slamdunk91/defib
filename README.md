@@ -1,8 +1,6 @@
 # defib
 **Defibrillator**
 
-![Untitled|690x390](upload://adaB96DFNd5uYusCdPMrgOYYb01.png) 
-
 A simple script to have a usable item Defibrillator when there is no EMS connected.
 
 __Required script__ :
