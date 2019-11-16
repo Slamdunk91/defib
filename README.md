@@ -26,6 +26,7 @@ if xPlayer.job.name == 'ambulance' then
 NEW : 
 
 --if xPlayer.job.name == 'ambulance' then
+
 if true then
 
 Thanks @JokreeTV for pointing this out ! 
