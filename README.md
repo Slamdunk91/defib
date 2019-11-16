@@ -29,7 +29,7 @@ NEW :
 
 if true then
 
-Thanks @JokreeTV for pointing this out ! 
+
 
 __Use guide__ :
 - Once connected, get a medikit item in your inventory and press the key "**K**" near a dead person to execute the script.
