@@ -19,9 +19,9 @@ RegisterNetEvent("defib:useDefib")
 AddEventHandler("defib:useDefib", function(ambulancesConnected)
   local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
   if ambulancesConnected > 0 then
-    ESX.ShowNotification("Médecin disponible, contactez une ambulance au plus vite !")
+    ESX.ShowNotification("EMS available, contact them!")
   elseif closestPlayer == -1 or closestDistance > 3.0 then
-    ESX.ShowNotification("Aucun joueur à proximité")
+    ESX.ShowNotification("No body nearby.")
   else
     ESX.TriggerServerCallback('esx_ambulancejob:getItemAmount', function(qtty)
       if qtty > 0 then
@@ -31,7 +31,7 @@ AddEventHandler("defib:useDefib", function(ambulancesConnected)
         if health == 0 then
           local playerPed = GetPlayerPed(-1)
           
-          ESX.ShowNotification("Réanimation en cours")
+          ESX.ShowNotification("Reanimation in progress ...")
           TaskStartScenarioInPlace(playerPed, 'CODE_HUMAN_MEDIC_TEND_TO_DEAD', 0, true)
           Citizen.Wait(10000)
           ClearPedTasks(playerPed)
@@ -39,10 +39,10 @@ AddEventHandler("defib:useDefib", function(ambulancesConnected)
           TriggerServerEvent('esx_ambulancejob:removeItem',defibItemName)
           TriggerServerEvent('esx_ambulancejob:revive', GetPlayerServerId(closestPlayer))
         else
-          ESX.ShowNotification("Cette personne n\'a pas besoin de défibrillateur")
+          ESX.ShowNotification("This person doesn't need reanimation.")
         end
       else
-        ESX.ShowNotification("Vous n\'avez pas de défibrillateur sur vous")
+        ESX.ShowNotification("You are not carrying a defibrillator.")
       end
     end, defibItemName)
   end
