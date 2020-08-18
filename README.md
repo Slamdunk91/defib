@@ -17,23 +17,21 @@ __Install guide__ :
 - You need to ensure that the item "medikit" (from esx_ambulancejob) is present in your database.
 - Rename the label of the item "medikit" in your database to your liking, in my case Label = Defibrillator.
 - Add the command "start defib" in your server.cfg.
-- In esx_ambulancejob/server/main.lua -> line 10 please modify this way : 
+- In esx_ambulancejob/server/main.lua -> line 14 please modify this way : 
 
 OLD : 
 
-if xPlayer.job.name == 'ambulance' then 
+if xPlayer and xPlayer.job.name == 'ambulance' then
 
 NEW : 
 
---if xPlayer.job.name == 'ambulance' then
-
-if true then
+if true then -- Defib script modification
 
 
 
 __Use guide__ :
 - Once connected, get a medikit item in your inventory and press the key "**K**" near a dead person to execute the script.
-If no EMS online the animation will start and will end up with reanimation of the dead person.
+If no EMS are online the animation will start and will end up with reanimation of the dead person.
 If an EMS is connected, you will get a notification saying that you need to call an EMS and no reanimation will be possible.
 
 __Conditions to use__ :
