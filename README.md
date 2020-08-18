@@ -8,6 +8,8 @@ __Required script__ :
 
 __Order scripts start__ : 
 
+Please make sure to respect this start order in your server.cfg
+
 - start esx_ambulancejob
 - start defib
 
