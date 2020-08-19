@@ -10,15 +10,15 @@ __Order scripts start__ :
 
 Please make sure to respect this start order in your server.cfg
 
-- start esx_ambulancejob
-- start defib
+- ensure esx_ambulancejob
+- ensure defib
 
 __Install guide__ :
 - Clone the repository defib.
 - Upload the defib folder to your FTP.
 - You need to ensure that the item "medikit" (from esx_ambulancejob) is present in your database.
 - Rename the label of the item "medikit" in your database to your liking, in my case Label = Defibrillator.
-- Add the command "start defib" in your server.cfg.
+- Add the command "ensure defib" in your server.cfg.
 - In esx_ambulancejob/server/main.lua -> line 14 please modify this way : 
 
 OLD : 
